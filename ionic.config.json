@@ -1,0 +1,7 @@
+{
+  "name": "Nektaro",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
