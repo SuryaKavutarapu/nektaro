@@ -1,0 +1,66 @@
+.address-wrapper {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  .location {
+    &.hide {
+      display: none;
+    }
+    .map {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      capacitor-google-map {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .search {
+      padding-top: 60px;
+      position: absolute;
+      z-index: 4;
+      left: 0;
+      right: 0;
+      top: 0;
+      .search-group {
+        width: 100%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+        background-color: var(--nektaro-white);
+        border-radius: 6px;
+        .search-list {
+          .searchitem {
+            width: 100%;
+            padding: 10px;
+            border-bottom: 1px solid var(--border-color);
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+    .actions {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--nektaro-white);
+      border: 1px solid var(--border-color);
+      height: 260px;
+      width: 100%;
+      padding: 20px 30px;
+    }
+  }
+  .addressform {
+    display: none;
+    &.enable {
+      display: block;
+    }
+    .addressform-group {
+      padding: 40px 20px;
+    }
+  }
+}

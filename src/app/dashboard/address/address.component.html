@@ -1,0 +1,78 @@
+<div class="address-wrapper">
+    <section class="location" [ngClass]="{'hide': showAddressFormView}">
+        <div class="map" id="map">
+            
+        </div>
+        <div class="actions">
+            <p class="os-base fc-black text-uppercase">
+                <strong>
+                    Confirm your address
+                </strong>
+            </p>
+            <p class="os-footnote fc-placeholder mb-20">
+                Use marker to drag to your exact location.
+            </p>
+            <p class="os-base fc-black">
+                {{completeAddress}}
+            </p>
+            <button class="primary block mt-20" (click)="showAddressForm()">
+                Confirm Location
+            </button>
+        </div>
+    </section>
+    <section>
+        <div class="addressform" [ngClass]="{'enable': showAddressFormView}">
+            <app-simple-header [title]="'Confirm your address'" [info]="'This will be your primary delivery address.'"
+                [action]="true" (actionEvent)="hideAddressForm()"></app-simple-header>
+            <div class="addressform-group">
+                <div [ngClass]="{'mb-20': statusmessage.enable}">
+                    <app-block-message *ngIf="statusmessage.enable" [data]="statusmessage.data"></app-block-message>
+                </div>
+                <form [formGroup]="addressForm" class="mt-20" #addressform="ngForm" (ngSubmit)="saveAddress()">
+                    <div class="row">
+                        <div class="col-mobile-12 col-pc-6 mb-10">
+                            <input class="nektaro-input" formControlName="line1" placeholder="Address Line 1"
+                                type="text" id="line1">
+                            <app-inline-message
+                                *ngIf="(addressFormControls.line1.invalid && (addressFormControls.line1.dirty || addressFormControls.line1.touched)) && addressFormControls.line1.errors?.['required']"
+                                [message]="'Please enter lane 1'"></app-inline-message>
+                        </div>
+                        <div class="col-mobile-12 col-pc-6 mb-10">
+                            <input class="nektaro-input" formControlName="line2" placeholder="Address Line 2"
+                                type="text" id="line2">
+                            <app-inline-message
+                                *ngIf="(addressFormControls.line2.invalid && (addressFormControls.line2.dirty || addressFormControls.line2.touched)) && addressFormControls.line2.errors?.['required']"
+                                [message]="'Please enter last name'"></app-inline-message>
+                        </div>
+                        <div class="col-mobile-12 mb-10">
+                            <input class="nektaro-input" formControlName="city" placeholder="City" type="text"
+                                id="city">
+                            <app-inline-message
+                                *ngIf="(addressFormControls.city.invalid && (addressFormControls.city.dirty || addressFormControls.city.touched)) && (addressFormControls.city.errors?.['required'])"
+                                [message]="'Please enter valid city.'"></app-inline-message>
+                        </div>
+                        <div class="col-mobile-12 mb-10">
+                            <input class="nektaro-input" formControlName="state" placeholder="State" type="state"
+                                id="state">
+                            <app-inline-message
+                                *ngIf="(addressFormControls.state.invalid && (addressFormControls.state.dirty || addressFormControls.state.touched)) && addressFormControls.state.errors?.['required']"
+                                [message]="'Please enter valid state address.'"></app-inline-message>
+                        </div>
+                        <div class="col-mobile-12 mt-10">
+                            <input class="nektaro-input" formControlName="pincode" placeholder="Pincode" type="number"
+                                id="pincode">
+                            <app-inline-message
+                                *ngIf="(addressFormControls.pincode.invalid && (addressFormControls.pincode.dirty || addressFormControls.pincode.touched)) && addressFormControls.pincode.errors?.['required']"
+                                [message]="'Please enter valid pincode'"></app-inline-message>
+                        </div>
+                        <div class="col-mobile-12">
+                            <button class="primary block mt-20" [disabled]="addressForm.invalid" type="submit">
+                                Save Address & Continue
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>

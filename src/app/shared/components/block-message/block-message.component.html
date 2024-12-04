@@ -1,0 +1,5 @@
+<div class="block-message" [ngClass]="[data.success ? 'success' : 'error']" *ngIf="!!data.message">
+    <span class="material-symbols-outlined">
+        {{ data.success ? 'check_circle': 'error' }}
+    </span> <span class="ml-10">{{data.message}}</span>
+</div>

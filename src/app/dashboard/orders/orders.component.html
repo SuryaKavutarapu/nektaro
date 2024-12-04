@@ -1,0 +1,34 @@
+<app-simple-header [title]="title"></app-simple-header>
+<section class="orders-wrapper">
+  <ng-container *ngIf="orders.length > 0; else orderEmptyState">
+    <section class="order-item" *ngFor="let order of orders" (click)="getReceipt(order.receiptId)">
+      <div class="icon">
+        <span class="material-symbols-outlined fc-nektaro">
+          receipt
+        </span>
+      </div>
+      <div class="content">
+        <div class="order-info">
+          <p class="os-base fc-black">
+            {{order.orderType}} . <span>₹ {{order.orderValue}}</span>
+          </p>
+          <p class="os-footnote fc-placeholder">
+            {{order.storeAddress}}
+          </p>
+          <span class="os-footnote fc-accent">
+            {{order.rewardsEarned}} Rewards Earned, {{order.orderReceivedDate}}
+          </span>
+        </div>
+      </div>
+      <div class="icon">
+        <span class="material-symbols-outlined fc-black">
+          arrow_forward
+        </span>
+      </div>
+    </section>
+  </ng-container>
+  <ng-template #orderEmptyState>
+    <app-empty-state [image]="'images/orders-emptystate.svg'" [title]="emptyState.title" [action]="emptyState.action"
+      (actionEvent)="emptyStateAction($event)" [description]="emptyState.description"></app-empty-state>
+  </ng-template>
+</section>

@@ -1,0 +1,26 @@
+.block-message {
+  width: 100%;
+  padding: 20px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  &.success {
+    background-color: var(--nektaro-light);
+    color: var(--nektaro-dark);
+
+    .icon {
+      color: var(--nektaro-dark);
+    }
+  }
+
+  &.error {
+    background-color: var(--nektaro-error-bg);
+    color: var(--nektaro-error);
+
+    .icon {
+      color: var(--nektaro-error);
+    }
+  }
+}

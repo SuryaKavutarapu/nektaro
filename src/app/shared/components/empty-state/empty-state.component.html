@@ -1,0 +1,10 @@
+<section class="empty-state">
+  <img [src]="imagePath" alt="orders-emptystate">
+  <h2 class="psd-base fc-dark mb-20 mt-20">{{title}}</h2>
+  <p class="os-footnote fc-black mb-20">
+    {{description}}
+  </p>
+  <button class="primary mt-20 sm" (click)="onActionClick($event)">
+    {{action}}
+  </button>
+</section>

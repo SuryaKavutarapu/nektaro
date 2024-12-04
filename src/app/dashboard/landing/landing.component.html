@@ -1,0 +1,113 @@
+<main class="landing-wrapper" [ngClass]="{'app-mode': layoutService.isMobileApp}">
+    <div class="container">
+        <div class="row">
+            <div class="col-pc-6 col-mobile-12 mb-20">
+                <p class="fc-black os-base text-uppercase mb-20"><strong>Subscription Info</strong></p>
+                <div class="subscription-card-promo" (click)="redirectToOne()">
+                    <h2 class="fc-white psd-medium mb-20">Nektaro One:
+                        Daily Delights, Delivered</h2>
+                    <p class="fc-white os-base">Introducing Nektaro One, our premier subscription service designed to
+                        bring you a daily dose of wellness</p>
+                    <div class="mt-20">
+                        <button class="secondary sm" (click)="redirectToOne()">
+                            subscribe now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-mobile-12 col-pc-6">
+                <div class="row">
+                    <div class="col-mobile-12">
+                        <p class="fc-black os-base text-uppercase mb-20"><strong>Quick Links</strong></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-mobile-6 col-pc-4">
+                        <div class="tile">
+                            <div class="mb-10">
+                                <span class="material-symbols-outlined">
+                                    search
+                                </span>
+                            </div>
+                            <div>
+                                <span class="os-base text-uppercase">
+                                    Find Store
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-mobile-6 col-pc-4">
+                        <div class="tile">
+                            <div class="mb-10">
+                                <span class="material-symbols-outlined">
+                                    widgets
+                                </span>
+                            </div>
+                            <div>
+                                <span class="os-base text-uppercase">
+                                    Menu
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-mobile-6 col-pc-4">
+                        <div class="tile">
+                            <div class="mb-10">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                            </div>
+                            <div>
+                                <span class="os-base text-uppercase">
+                                    Profile
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-mobile-6 col-pc-4">
+                        <div class="tile">
+                            <div class="mb-10">
+                                <span class="material-symbols-outlined">
+                                    support
+                                </span>
+                            </div>
+                            <div>
+                                <span class="os-base text-uppercase">
+                                    Support
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-mobile-6 col-pc-4">
+                        <div class="tile">
+                            <div class="mb-10">
+                                <span class="material-symbols-outlined">
+                                    shopping_cart
+                                </span>
+                            </div>
+                            <div>
+                                <span class="os-base text-uppercase">
+                                    Payments
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-mobile-6 col-pc-4">
+                        <div class="tile">
+                            <div class="mb-10">
+                                <span class="material-symbols-outlined">
+                                    shopping_cart
+                                </span>
+                            </div>
+                            <div>
+                                <span class="os-base text-uppercase">
+                                    Cart
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

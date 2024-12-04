@@ -1,0 +1,33 @@
+.receipt-wrapper {
+  width: 100%;
+  height: calc(100% - 160px);
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .receipt-header {
+    padding: 20px 30px;
+    width: 100%;
+    background-color: var(--nektaro-dark);
+  }
+  .receipt-content {
+    width: 100%;
+    padding-top: 30px;
+    .receipt-item {
+      box-sizing: border-box;
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      div {
+        &:first-child {
+          width: 60%;
+        }
+        &:last-child {
+          width: 40%;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

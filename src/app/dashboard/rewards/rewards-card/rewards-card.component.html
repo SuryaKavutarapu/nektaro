@@ -1,0 +1,62 @@
+<div class="rewards-card-wrapper">
+  <ng-container *ngIf="rewardsData.rewardsPoints !== 7; else offerUnlockTemplate">
+    <section class="reward-info">
+      <ng-container *ngIf="rewardsData.rewardsPoints !== 0; else rewardLevelInfo">
+        <span class="mb-20">
+          <app-rewards-points [points]="rewardsData.rewardsPoints"></app-rewards-points>
+        </span>
+        <ng-container *ngIf="rewardsData.rewardsPoints > 0 && rewardsData.rewardsPoints < 7">
+          <p class="os-footnote fc-black mt-20 text-uppercase">
+            Nektaro points
+          </p>
+          <p class="os-large fc-black mb-20 text-uppercase">
+            {{rewardsData.rewardsPoints}}
+          </p>
+          <p class="os-footnote fc-black mb-20">
+            Another sip, another box checked. Keep the streak going!
+          </p>
+        </ng-container>
+      </ng-container>
+    </section>
+    <section class="reward-terms">
+      <ng-container *ngIf="rewardsData.rewardsPoints === 0; else rewardLevelInfo">
+        <p class="os-footnote mb-10"><strong>Terms & Conditions Apply</strong></p>
+        <p class="os-footnote mb-10">No Cash Value</p>
+        <p class="os-footnote mb-10">Not valid with any other discounts and promotions</p>
+        <p class="os-footnote mb-10">Valid for any medium Smoothies, Combinational Juices only.</p>
+      </ng-container>
+    </section>
+  </ng-container>
+</div>
+
+<ng-template #offerUnlockTemplate>
+  <section class="reward-terms text-center">
+    <span class="mb-20">
+      <app-rewards-points [points]="rewardsData.rewardsPoints"></app-rewards-points>
+    </span>
+    <h2 class="psd-medium fc-dark mb-20 mt-20">{{rewardsCompleteState?.successMessage}}</h2>
+    <p class="os-footnote fc-black mb-20">
+      {{rewardsCompleteState?.description}}
+    </p>
+    <button class="primary block mt-20">
+      {{rewardsCompleteState.actionText}}
+    </button>
+  </section>
+</ng-template>
+
+<ng-template #rewardLevelInfo>
+  <div class="text-center">
+    <h2 class="psd-medium fc-dark mb-20">Double the Goodness: BOGO Welcome Offer!</h2>
+    <p class="os-footnote fc-black mb-20">
+      Welcome aboard! Buy a drink and get another on us—because one is never enough. Enjoy your bonus sip!
+    </p>
+    <ng-container *ngIf="rewardsData.rewardsPoints === 0">
+      <p class="os-base fc-black mb-10 text-uppercase">
+        your coupon code
+      </p>
+      <p class="os-medium fc-nektaro mb-20 text-uppercase">
+        NEKT - 123421272
+      </p>
+    </ng-container>
+  </div>
+</ng-template>

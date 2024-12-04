@@ -1,0 +1,102 @@
+<app-header></app-header>
+<div class="contents-wrapper">
+    <app-tabs [tabs]="tabs" (tabChange)="onTabChange($event)"></app-tabs>
+    <ng-container *ngIf="tabIndex === '1'">
+        <div class="subscription-plan-card" *ngFor="let plan of weightLossPlans" (click)="toggleModel(plan.id)">
+            <div class="card-content">
+                <p class="fc-black os-base mb-10"><strong>{{plan.name}}</strong></p>
+                <p class="fc-placeholder os-footnote mb-20">{{plan.description}}</p>
+                <p class="fc-nektaro os-footnote"><strong>Plan starting from ₹ {{getPlanPrice(plan)}} /-</strong></p>
+            </div>
+            <div class="card-image" style="background-image: url('/assets/images/powerbowls-bg-image.png')">
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="tabIndex === '2'">
+        
+    </ng-container>
+    <ng-container *ngIf="tabIndex === '3'">
+
+    </ng-container>
+    <ng-template #emptyState>
+        <p class="text-center mt-50 mb-50 osc-base fc-dark">
+            No Products Available for your location
+        </p>
+    </ng-template>
+</div>
+
+<section class="model" [ngClass]="{'open': showModel}">
+    <div class="model-header">
+        <div class="heading">
+            <p class="os-base fc-dark text-uppercase"><strong>{{subscriptionDetails.name}}</strong></p>
+        </div>
+        <div class="action" (click)="toggleModel(subscriptionDetails.id)">
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </div>
+    </div>
+    <div class="model-content">
+        <div class="carousel-wrapper">
+            <div class="carousel">
+                <div *ngFor="let item of subscriptionDetails.productImages" class="carousel-image" style="background-image: url('/assets/images/powerbowls-bg-image.png')">
+                </div>
+            </div>
+        </div>
+        <div class="text-content">
+            <p class="fc-dark os-base mb-10"><strong>Refeshing Fruit Bowls</strong></p>
+            <p class="fc-black os-base mb-20">A wholesome mix of fresh citrus fruits, hydrating fruits,
+                seasonal picks, and crunchy vegetables.</p>
+        </div>
+        <div class="plans">
+            <app-tabs [tabs]="planTabs" (tabChange)="onPlanTabChange($event)"></app-tabs>
+            <ng-container *ngIf="planTabIndex === '1'">
+                <div class="subscription-plan-card">
+                    <div class="full-content text-center">
+                        <p class="fc-black os-base mb-10">Total Bowls: <strong class="fc-dark">6 (Monday - Saturday)</strong></p>
+                        <p class="fc-black os-base mb-20">Available Slots: <strong class="fc-dark">Morning, Evening</strong></p>
+                        <button class="primary block mb-10">Pay ₹899.00</button>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="planTabIndex === '2'">
+    
+            </ng-container>
+            <ng-container *ngIf="planTabIndex === '3'">
+    
+            </ng-container>
+            <ng-template #emptyState>
+                <p class="text-center mt-50 mb-50 osc-base fc-dark">
+                    No Products Available for your location
+                </p>
+            </ng-template>
+        </div>
+        <div class="plan-info">
+            <div class="text-content">
+                <p class="fc-dark os-base mb-10"><strong>Refeshing Fruit Bowls</strong></p>
+                <p class="fc-black os-base mb-20">A wholesome mix of fresh citrus fruits, hydrating fruits,
+                    seasonal picks, and crunchy vegetables.</p>
+            </div>
+            <div class="subscription-plan-card">
+                <div class="card-content">
+                    <p class="fc-black os-base mb-10"><strong>Refeshing Fruit Bowls</strong></p>
+                    <p class="fc-placeholder os-footnote mb-20">A wholesome mix of fresh citrus fruits, hydrating
+                        fruits, seasonal picks, and crunchy vegetables.</p>
+                    <p class="fc-nektaro os-footnote"><strong>Plan starting from Rs. 799.00/-</strong></p>
+                </div>
+                <div class="card-image" style="background-image: url('/assets/images/powerbowls-bg-image.png')">
+                </div>
+            </div>
+            <div class="subscription-plan-card">
+                <div class="card-content">
+                    <p class="fc-black os-base mb-10"><strong>Refeshing Fruit Bowls</strong></p>
+                    <p class="fc-placeholder os-footnote mb-20">A wholesome mix of fresh citrus fruits, hydrating
+                        fruits, seasonal picks, and crunchy vegetables.</p>
+                    <p class="fc-nektaro os-footnote"><strong>Plan starting from Rs. 799.00/-</strong></p>
+                </div>
+                <div class="card-image" style="background-image: url('/assets/images/powerbowls-bg-image.png')">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,8 +1,8 @@
 {
   "name": "nektaro",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Surya Teja Kavutarapu",
+  "homepage": "https://nektaro.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -24,9 +24,13 @@
     "@capacitor/android": "6.2.0",
     "@capacitor/app": "6.0.2",
     "@capacitor/core": "6.2.0",
+    "@capacitor/filesystem": "^6.0.2",
+    "@capacitor/geolocation": "^6.0.2",
+    "@capacitor/google-maps": "^6.0.1",
     "@capacitor/haptics": "6.0.2",
     "@capacitor/ios": "6.2.0",
     "@capacitor/keyboard": "6.0.3",
+    "@capacitor/network": "^6.0.3",
     "@capacitor/status-bar": "6.0.2",
     "@ionic/angular": "^8.0.0",
     "ionicons": "^7.0.0",
@@ -62,5 +66,5 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.0"
   },
-  "description": "An Ionic project"
+  "description": "Nektaro"
 }

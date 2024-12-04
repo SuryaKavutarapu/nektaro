@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>left</title>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="screens/home" transform="translate(-309, -3410)" fill="#004B23" fill-rule="nonzero">
+            <g id="testimonials" transform="translate(299, 3145)">
+                <g id="carousel" transform="translate(0, 202)">
+                    <g id="arrow-button-copy" transform="translate(0, 53)">
+                        <polygon id="left" transform="translate(18, 18) rotate(180) translate(-18, -18)" points="22.175 19 10 19 10 17 22.175 17 16.575 11.4 18 10 26 18 18 26 16.575 24.6"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

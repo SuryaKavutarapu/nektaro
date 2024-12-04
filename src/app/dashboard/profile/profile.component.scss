@@ -1,0 +1,32 @@
+.profile-wrapper {
+    padding: 0px 30px;
+    .profile-icon  {
+        margin: 30px auto 10px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: var(--nektaro-light);
+        color: var(--nektaro-dark);
+        font-weight: bold;
+        line-height: 80px;
+        font-size: 28px;
+        text-align: center;
+    }
+    .location-info {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .icon {
+              display: inline-block;
+              color: var(--nektaro-dark);
+              margin-right: 20px;
+              .material-symbols-outlined {
+                font-size: 32px;
+              }
+            }
+            .location {
+              display: inline-block
+            }
+    }
+}

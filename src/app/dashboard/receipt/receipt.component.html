@@ -1,0 +1,27 @@
+<app-simple-header [title]="title" [action]="true" (actionEvent)="goBack($event)"></app-simple-header>
+<div class="receipt-wrapper">
+  <div class="receipt-header">
+    <p class="os-base fc-offwhite mb-10">{{receiptDetails.orderType}}</p>
+    <p class="os-footnote fc-neutral mb-5 mt-5">
+      Total ₹ {{receiptDetails.orderValue}} | Receipt #{{receiptDetails.receiptId}}
+    </p>
+    <p class="os-footnote fc-neutral">
+      {{receiptDetails.rewardsEarned}} Rewards Earned, {{receiptDetails.orderDeliveredDate}}
+    </p>
+  </div>
+  <div class="receipt-content border-bottom">
+    <div class="receipt-item" *ngFor="let item of receiptDetails?.orderDetails?.items">
+      <div>
+        <p class="os-base fc-black">
+          {{item.name}}
+        </p>
+        <span class="os-footnote fc-placeholder">{{item.size}} {{item.quantity}}</span>
+      </div>
+      <div>
+        <p class="os-base fc-dark">
+          ₹ {{item.basePrice}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

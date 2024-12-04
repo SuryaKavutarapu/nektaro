@@ -1,0 +1,14 @@
+<header class="simple-header">
+  <span class="action-item" *ngIf="action" (click)="onActionClick($event)">
+    <span class="material-symbols-outlined fc-black">
+      arrow_back
+    </span>
+  </span>
+  <div>
+    <p class="psd-medium fc-dark">
+      <strong>
+        {{title}}
+      </strong>
+    </p>
+  </div>
+</header>

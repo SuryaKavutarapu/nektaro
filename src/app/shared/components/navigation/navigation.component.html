@@ -1,0 +1,55 @@
+<nav class="nektaro-nav">
+    <div class="container nektaro-nav-container">
+        <a href="/"><img src="/assets/images/nektaro-wordmark-primary.svg" class="logo" alt="Nektaro Wordmark Logo"></a>
+        <ul class="nektaro-menu" *ngIf="!authService.isAuthenticated">
+            <li><a href="https://www.nektaro.com">Home</a></li>
+            <li><a href="https://www.nektaro.com/one">Nektaro One</a></li>
+            <li><a href="https://www.nektaro.com/stores/">Locate Store</a></li>
+            <li><a href="https://www.nektaro.com/mission/">Our Mission</a></li>
+            <li><a href="https://www.nektaro.com/contactus/">Contact Us</a></li>
+            <li><a href="/auth/login" class="active">Login</a></li>
+        </ul>
+        <ul class="nektaro-menu" *ngIf="authService.isAuthenticated">
+            <li><a href="https://www.nektaro.com/mission/">Our Mission</a></li>
+            <li><a href="https://www.nektaro.com/contactus/">Contact Us</a></li>
+            <li><a href="javascript:void(0);" class="active">Logout</a></li>
+            <li>
+                <div class="profile" (click)="redirectToProfile()">
+                    <div class="profile-img">
+                        <span>{{userInitial | uppercase}}</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="container nektaro-mobile-nav">
+        <div>
+            <a href="/"><img src="/assets/images/nektaro-wordmark-primary.svg" class="logo"
+                    alt="Nektaro Wordmark Logo"></a>
+        </div>
+        <div *ngIf="!authService.isAuthenticated">
+            <div class="toggle">
+                <label for="toggle" class="toggle-button">
+                </label>
+                <input type="checkbox" name="toggle" id="toggle">
+                <div class="nektaro-mobile-menu">
+                    <ul class="nektaro-menu mb-50">
+                        <li><a href="https://www.nektaro.com">Home</a></li>
+                        <li><a href="https://www.nektaro.com/one/">Nektaro One</a></li>
+                        <li><a href="https://www.nektaro.com/stores/">Locate Store</a></li>
+                        <li><a href="https://www.nektaro.com/mission/">Our Mission</a></li>
+                        <li><a href="https://www.nektaro.com/contactus/">Contact Us</a></li>
+                        <li class="active"><a href="javascript:void(0)">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="authService.isAuthenticated">
+            <div class="profile" (click)="redirectToProfile()">
+                <div class="profile-img">
+                    <span>{{userInitial | uppercase}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

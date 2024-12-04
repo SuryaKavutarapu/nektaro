@@ -35,3 +35,1186 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  &.animate {
+    @extend .skeleton;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--nektaro-white);
+  color: var(--nektaro-black);
+}
+
+/* You can add global styles to this file, and also import other style files */
+:root {
+  font-size: 16px;
+  --nektaro-white: hsl(0, 0%, 100%);
+  --nektaro-green: #068c0a;
+  --nektaro-light: #c9e4ca;
+  --nektaro-dark: #004b23;
+  --nektaro-offwhite: #f9f9f9;
+  --nektaro-neutral: #fff8e8;
+  --nektaro-accent: #2b9348;
+  --nektaro-light-bg: #F2F9F3;
+  --nektaro-black: #282828;
+  --nektaro-error: #780000;
+  --nektaro-error-bg: #e0afa0;
+  --border-color: #efefef;
+  --placholder-color: #7d7d7d;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.psd-large {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.psd-medium {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.psd-base {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.2;
+  font-weight: 500;
+}
+
+.os-large {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.os-medium {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.os-base {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.os-normal {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.os-footnote {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.fc-dark {
+  color: var(--nektaro-dark) !important;
+}
+
+.fc-error {
+  color: var(--nektaro-error) !important;
+}
+
+.fc-black {
+  color: var(--nektaro-black) !important;
+}
+
+.fc-light {
+  color: var(--nektaro-light) !important;
+}
+
+.fc-placeholder {
+  color: var(--placholder-color) !important;
+}
+
+.fc-neutral {
+  color: var(--nektaro-neutral) !important;
+}
+
+.fc-nektaro {
+  color: var(--nektaro-green) !important;
+}
+
+.fc-offwhite {
+  color: var(--nektaro-offwhite) !important;
+}
+
+.fc-white {
+  color: var(--nektaro-white) !important;
+}
+
+.fc-accent {
+  color: var(--nektaro-accent) !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  margin: 10px 0px;
+  display: inline-block;
+  color: var(--nektaro-green);
+  &:hover, &:active, &:visited {
+    color: var(--nektaro-green);
+  }
+
+  &.base-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 24px;
+    span {
+      margin-left: 10px;
+      font-size: 20px;
+    }
+  }
+}
+
+.secondary {
+  padding: 10px 32px;
+  background-color: var(--nektaro-offwhite) !important;
+  color: var(--nektaro-green) !important;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid var(--nektaro-white) !important;
+  cursor: pointer;
+}
+
+.secondary:hover {
+  background-color: var(--nektaro-offwhite);
+  border: 1px solid var(--nektaro-offwhite);
+}
+
+.secondary.sm {
+  padding: 8px 22px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.secondary:disabled {
+  opacity: 0.5;
+  cursor: progress;
+}
+
+.secondary.block {
+  width: 100%;
+}
+
+.secondary:hover {
+  background-color: var(--nektaro-offwhite);
+  border: 1px solid var(--nektaro-offwhite);
+}
+
+.primary {
+  padding: 10px 32px;
+  background-color: var(--nektaro-green) !important;
+  color: var(--nektaro-offwhite) !important;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid var(--nektaro-green) !important;
+  cursor: pointer;
+}
+
+.primary:hover {
+  background-color: var(--nektaro-dark);
+  border: 1px solid var(--nektaro-dark);
+}
+
+.primary.sm {
+  padding: 8px 22px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.primary:disabled {
+  opacity: 0.5;
+}
+
+.primary:hover {
+  background-color: var(--nektaro-dark);
+  border: 1px solid var(--nektaro-dark);
+}
+
+.outline-primary.sm {
+  padding: 8px 22px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.primary.block {
+  width: 100%;
+}
+
+.outline-primary {
+  padding: 10px 32px;
+  background-color: transparent;
+  color: var(--nektaro-dark) !important;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid var(--nektaro-dark) !important;
+  cursor: pointer;
+}
+
+.outline-primary:hover {
+  color: var(--nektaro-accent);
+  border: 1px solid var(--nektaro-accent);
+}
+
+.outline-primary.block {
+  width: 100%;
+}
+
+.outline-white {
+  padding: 10px 32px;
+  background-color: transparent;
+  color: var(--nektaro-white) !important;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid var(--nektaro-white) !important;
+  cursor: pointer;
+}
+
+.outline-white:hover {
+  color: var(--nektaro-white);
+  border: 1px solid var(--nektaro-white);
+}
+
+.outline-white.block {
+  width: 100%;
+}
+
+.outline-white.sm {
+  padding: 8px 22px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.outline-white::before,
+.primary::before {
+  display: none;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.pl-20 {
+  padding-left: 20px;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nektaro-nav {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  background-color: var(--nektaro-white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nektaro-nav-container {
+  height: 100%;
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.nektaro-mobile-nav {
+  height: 100%;
+  padding: 10px 40px;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.nektaro-mobile-menu {
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  left: -100%;
+  top: 80px;
+  overflow: hidden;
+  background-color: var(--nektaro-white);
+  height: calc(100vh - 80px);
+  flex-direction: column;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.nektaro-mobile-menu .nektaro-menu {
+  margin-bottom: 30px;
+}
+
+.nektaro-mobile-menu .nektaro-menu li {
+  display: block;
+  padding: 10px 0px;
+}
+
+.nektaro-mobile-menu .nektaro-menu li a {
+  display: block;
+  margin: 0px;
+  padding: 5px 0px;
+}
+
+.toggle {
+  width: 40px;
+}
+
+.toggle input {
+  visibility: hidden;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.toggle input:checked + .nektaro-mobile-menu {
+  left: 0;
+}
+
+.toggle input::before {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  visibility: visible;
+  content: "";
+  left: 0;
+  right: 0;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(/assets/images/hamberger.svg);
+}
+
+.toggle input:checked::before {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  visibility: visible;
+  content: "";
+  left: 0;
+  right: 0;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(/assets/images/close.svg);
+}
+
+.toggle-button .close {
+  display: none;
+}
+
+.toggle .icon {
+  width: 40px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.logo {
+  width: 160px;
+  height: 50px;
+  margin-top: 7px;
+}
+
+.nektaro-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nektaro-menu li {
+  padding: 0;
+  display: inline-flex;
+  margin: 0;
+}
+
+.nektaro-menu li a {
+  font-size: 14px;
+  color: var(--nektaro-black);
+  text-decoration: none;
+  padding: 10px 8px;
+  margin: 0px 10px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nektaro-menu li a:visited {
+  color: var(--nektaro-black);
+}
+
+.nektaro-menu li a:hover,
+.nektaro-menu li a.active {
+  color: var(--nektaro-green);
+}
+
+.nektaro-menu li.active a::before {
+  position: absolute;
+  content: "";
+  left: calc(50% - 5px);
+  bottom: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--nektaro-white);
+  color: var(--nektaro-white);
+}
+
+.nektaro-header {
+  background-color: var(--nektaro-neutral);
+  box-sizing: border-box;
+  padding: 160px 50px 80px;
+  min-height: 600px;
+  overflow-y: hidden;
+  background-blend-mode: lighten;
+  color: var(--nektaro-dark);
+  text-align: left;
+  position: relative;
+}
+
+.nektaro-header .header-image {
+  width: 400px;
+  position: absolute;
+}
+
+.intro-container {
+  width: 100%;
+  padding: 80px 0px;
+  box-sizing: border-box;
+  background-color: var(--nektaro-dark);
+  display: block;
+}
+
+.intro-image {
+  width: 80px;
+}
+
+.intro-image.eco {
+  width: 70px;
+}
+
+.intro-image.subscription {
+  width: 85px;
+}
+
+.services-container {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 80px 0px;
+}
+
+.service-card {
+  padding: 80px 0px;
+}
+
+.subscription-wrapper,
+.newsletter-wrapper,
+.pricing {
+  width: 100%;
+  padding: 80px 0px;
+  background-color: #f3f9f3;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.subscription-features {
+  padding: 50px 0px;
+}
+
+.subscription-list {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0px 50px;
+}
+
+.subscription-list li {
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.app-wrapper {
+  width: 100%;
+  padding: 80px 0px;
+  background-color: var(--nektaro-dark);
+}
+
+.app-buttons {
+  margin: 30px 0px;
+  text-align: center;
+}
+
+.app-buttons a {
+  all: unset;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+.app-buttons a img {
+  width: 140px;
+}
+
+.testimonials-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 80px 0px;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.testimonials-card {
+  padding: 50px;
+}
+
+.arrow-button {
+  all: unset;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.badge {
+  padding: 8px 20px;
+  color: var(--nektaro-dark);
+  background-color: var(--nektaro-light);
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.badge-purple {
+  padding: 8px 20px;
+  color: #8c52ff;
+  background-color: transparentize(#8c52ff, 0.8);
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.badge-lemongreen {
+  padding: 8px 20px;
+  color: var(--nektaro-dark);
+  background-color: transparentize(#9fcc2e, 0.8);
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.newsletter-card,
+.store-card {
+  width: 100%;
+  height: 80px;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  margin: 30px auto 20px;
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  background-color: var(--nektaro-white);
+}
+
+.newsletter-card input,
+.store-card input {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  height: 76px;
+  padding: 25px;
+  width: 99%;
+  padding-right: 120px;
+  box-shadow: none;
+  color: var(--nektaro-dark);
+}
+
+.newsletter-card input:focus-visible,
+.store-card input:focus-visible {
+  box-shadow: none;
+  outline: none;
+}
+
+.newsletter-card input::placeholder,
+.store-card input::placeholder {
+  color: var(--placholder-color);
+}
+
+.newsletter-card button,
+.store-card button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.link-dark,
+.link-dark:hover,
+.link-dark:active,
+.link:visited {
+  color: var(--nektaro-dark);
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+.top-spacer {
+  margin-top: 100px;
+}
+
+.contactus-wrapper {
+  width: 100%;
+  padding: 50px;
+}
+
+.address-wrapper {
+  padding: 30px 0px 10px;
+}
+
+.mission-wrapper {
+  width: 100%;
+  padding: 50px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.store-wrapper {
+  padding: 220px 0px 80px;
+  background-color: var(--nektaro-offwhite);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.nektaro-one {
+  margin-top: 80px;
+}
+
+.one-header {
+  padding: 80px 0px;
+  background-color: var(--nektaro-dark);
+  color: var(--nektaro-neutral);
+}
+
+.nektaro-benifits {
+  padding: 80px 0px 160px;
+  background-color: #f3f9f3;
+  box-sizing: border-box;
+}
+
+.benifits-image {
+  width: 100%;
+}
+
+.one-video-wrapper {
+  width: 100%;
+  margin-top: -80px;
+}
+
+.video-card {
+  border-radius: 12px;
+  background-color: var(--nektaro-white);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-content: center;
+}
+
+.one-works {
+  padding: 80px 0px;
+}
+
+.step-card {
+  padding: 20px 0px;
+}
+
+.step-card img {
+  width: 120px;
+  margin-bottom: 30px;
+}
+
+.step-two {
+  margin-top: 150px;
+}
+
+.step-three {
+  margin-top: 550px;
+}
+
+.footer-logo {
+  width: 50px;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.footer-links li {
+  padding: 2px 0px;
+  width: 100%;
+}
+
+.footer-links li a,
+.footer-links li a:visited,
+.footer-links li:active {
+  color: var(--nektaro-black);
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  color: var(--nektaro-green);
+}
+
+.nektaro-footer {
+  width: 100%;
+  padding: 50px 0px 0px;
+}
+
+.footer-end {
+  width: 100%;
+  margin-top: 30px;
+  background-color: var(--nektaro-offwhite);
+  padding: 30px 0px;
+}
+
+@media (max-width: 641px) {
+  .nektaro-nav-container {
+    display: none;
+  }
+
+  .nektaro-mobile-nav {
+    display: flex;
+  }
+
+  .nektaro-header {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .store-card,
+  .newsletter-card {
+    width: 100%;
+    height: 140px;
+    padding: 0px 20px;
+  }
+
+  .newsletter-card input,
+  .store-card input {
+    position: static;
+    width: 100%;
+    padding-right: 25px;
+  }
+
+  .newsletter-card button,
+  .store-card button {
+    position: static;
+    display: block;
+    width: 100%;
+  }
+
+  .d-m-none {
+    display: none;
+  }
+
+  .step-two,
+  .step-three {
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  .one-works-reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+.pricing-card {
+  margin: 80px 0px;
+  width: 100%;
+  min-height: 400px;
+  padding: 80px 20px 30px;
+  box-sizing: border-box;
+  background-color: var(--nektaro-white);
+  border: 1px solid var(--border-color);
+  position: relative;
+  border-radius: 10px;
+}
+.pricing-card img {
+  width: 130px;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 65px);
+}
+
+.nekatro-wrapper {
+  width: 100%;
+  display: block;
+  &.app-mode {
+    min-height: calc(100vh - 80px);
+    margin-bottom: 20px;
+  }
+}
+
+.nektaro-input {
+  all: unset;
+  display: block;
+  border: 1px solid var(--border-color);
+  padding: 16px 20px;
+  line-height: 16px;
+  @extend .os-base;
+  border-radius: 6px;
+  margin: 0px auto;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--nektaro-black);
+  box-shadow: none;
+  &::placeholder {
+    color: var(--placholder-color);
+  }
+  &:focus {
+    border-color: var(--nektaro-dark);
+  }
+
+  &.small {
+    padding: 10px 20px;
+    line-height: 16px;
+    margin: 5px;
+  }
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: transparentize($color: #c9e4ca, $amount: 0.5);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.skeleton-text {
+  width: 100%;
+  height: 0.7rem;
+  border-radius: 0.25rem;
+}
+
+.skeleton-text__body {
+  width: 75%;
+}
+
+.skeleton-footer {
+  width: 30%;
+}
+
+.ghost-block {
+  width: 100%;
+  height: 50px;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  @extend .skeleton;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.ghost-text {
+  @extend .skeleton-text;
+  @extend .skeleton;
+  height: 22px;
+  background-color: var(--border-color);
+  &.first {
+    width: 50%;
+  }
+}
+
+.layout-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  .layout-content {
+    width: 100%;
+    padding: 50px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+.card-base {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 30px;
+  background-color: var(--nektaro-white);
+  &.has-br {
+    padding: 20px 0px;
+  }
+}
+
+.card {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  .card-img {
+    border-radius: 6px 6px 0px 0px;
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .card-content {
+    padding: 10px;
+    .price {
+      font-size: 24px;
+    }
+    a {
+      margin: 5px 0px;
+    }
+  }
+
+  &.verticle {
+    display: flex;
+    flex-direction: row;
+    height: 160px;
+    position: relative;
+    .card-img {
+      border-radius: 6px 0px 0px 6px;
+      width: 120px;
+      height: 100%;
+    }
+    .card-content {
+      padding: 10px 15px;
+      width: calc(100% - 120px);
+    }
+  }
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+}

@@ -1,0 +1,30 @@
+.orders-wrapper {
+  width: 100%;
+  height: calc(100% - 80px);
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .order-item {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    .icon {
+      margin-right: 20px;
+      width: 40px;
+      padding: 10px;
+      box-sizing: border-box;
+      .material-symbols-outlined {
+        font-size: 24px;
+      }
+    }
+    .content {
+      width: cal(100% -160px);
+    }
+  }
+
+}

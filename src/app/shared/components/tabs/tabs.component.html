@@ -1,0 +1,10 @@
+<section class="tabs-wrapper">
+    <div class="tabs-header">
+        <ul class="tablist">
+            <li *ngFor="let item of tabs" [ngClass]="{'active': item.index === activeTab}"
+                (click)="onTabClick(item.index)">
+                {{item.name}}
+            </li>
+        </ul>
+    </div>
+</section>

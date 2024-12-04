@@ -1,0 +1,50 @@
+<app-simple-header [title]="title"></app-simple-header>
+<div class="profile-wrapper">
+    <section class="mb-50">
+        <div class="profile-icon">
+            {{initials | uppercase}}
+        </div>
+        <p class="fc-black os-normal text-center"><strong>{{data.firstName | titlecase}} {{data.lastName |
+                titlecase}}</strong></p>
+    </section>
+    <section class="mb-20">
+        <p class="fc-placeholder os-base mb-10">
+            Account info
+        </p>
+        <div class="card-base has-br">
+            <p class="os-base fc-black pl-20 pr-20">Email: {{ data.email | lowercase}}</p>
+            <div class="horizontal-line mb-20 mt-20"></div>
+            <p class="os-base fc-black pl-20 pr-20">Phone: {{ data.mobile | lowercase}}</p>
+        </div>
+    </section>
+    <section class="mb-20">
+        <p class="fc-placeholder os-base mb-10">
+            Delivery Address
+        </p>
+        <div class="card-base">
+            <div class="location-info">
+                <div class="icon">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                </div>
+                <div class="location">
+                    <address>
+                        <p class="fc-black os-footnote">
+                            {{ 'HIG 265, new HB colony'  | titlecase}} 
+                        </p>
+                        <p class="fc-black os-footnote">
+                            {{ 'Bhavanipuram, vijayawada'  | titlecase}} 
+                        </p>
+                        <p class="fc-black os-footnote">
+                            85305
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <button class="primary block" (click)="logout()">Logout</button>
+    </section>
+</div>

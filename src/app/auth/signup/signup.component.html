@@ -1,0 +1,77 @@
+<section class="mapp-signup-wrapper">
+    <ng-container *ngIf="!statusmessage.enable; else signupFormMessage">
+        <div class="container signup">
+            <div class="row mb-50">
+                <div class="col-mobile-12 mb-20 col-pc-6 col-pc-offset-3">
+                    <div class="intro-text text-center">
+                        <h2 class="fc-dark psd-medium mb-20">Let’s Nourish Naturally 
+                        </h2>
+                        <p class="fc-black os-base mb-20">Sign up now to take the first step towards a healthier lifestyle and
+                            unlock the power of daily nutrition tailored just for you!</p>
+                    </div>
+                    <div class="signup-card">
+                        <form [formGroup]="signupForm" #signup="ngForm" (ngSubmit)="handleSignup()">
+                            <div class="row">
+                                <div class="col-mobile-12 col-pc-6 mb-20">
+                                    <input class="nektaro-input" formControlName="firstName" placeholder="First Name"
+                                        type="text" id="firstName">
+                                    <app-inline-message
+                                        *ngIf="(signupFormControls.firstName.invalid && (signupFormControls.firstName.dirty || signupFormControls.firstName.touched)) && signupFormControls.firstName.errors?.['required']"
+                                        [message]="'Please enter first name'"></app-inline-message>
+                                </div>
+                                <div class="col-mobile-12 col-pc-6 mb-20">
+                                    <input class="nektaro-input" formControlName="lastName" placeholder="Last Name"
+                                        type="text" id="lastName">
+                                    <app-inline-message
+                                        *ngIf="(signupFormControls.lastName.invalid && (signupFormControls.lastName.dirty || signupFormControls.lastName.touched)) && signupFormControls.lastName.errors?.['required']"
+                                        [message]="'Please enter last name'"></app-inline-message>
+                                </div>
+                                <div class="col-mobile-12 mb-20">
+                                    <input class="nektaro-input" formControlName="mobile" placeholder="Phone Number"
+                                        type="number" id="mobile">
+                                    <app-inline-message
+                                        *ngIf="(signupFormControls.mobile.invalid && (signupFormControls.mobile.dirty || signupFormControls.mobile.touched)) && (signupFormControls.mobile.errors?.['required'] || signupFormControls.mobile.errors?.['pattern'])"
+                                        [message]="'Please enter valid mobile.'"></app-inline-message>
+                                </div>
+                                <div class="col-mobile-12 mb-20">
+                                    <input class="nektaro-input" formControlName="email"
+                                        placeholder="Email" type="email" id="email">
+                                    <app-inline-message
+                                        *ngIf="(signupFormControls.email.invalid && (signupFormControls.email.dirty || signupFormControls.email.touched)) && signupFormControls.email.errors?.['required']"
+                                        [message]="'Please enter valid email address.'"></app-inline-message>
+                                </div>
+                                <div class="col-mobile-12 mb-20">
+                                    <input class="nektaro-input" formControlName="password" placeholder="Enter password"
+                                        type="password" id="password">
+                                    <app-inline-message
+                                        *ngIf="(signupFormControls.password.invalid && (signupFormControls.password.dirty || signupFormControls.password.touched)) && signupFormControls.password.errors?.['required']"
+                                        [message]="'Please enter valid password'"></app-inline-message>
+                                </div>
+                                <div class="col-mobile-12 mt-20 mb-20">
+                                    <p class="os-footnote fc-black">By <strong>Registring</strong> you have
+                                        agreed to these
+                                        <strong>Terms and conditions</strong>
+                                    </p>
+                                </div>
+                                <div class="col-mobile-12">
+                                    <button class="primary block mt-20" [disabled]="signupForm.invalid" type="submit">
+                                        Signup
+                                    </button>
+                                </div>
+                                <div class="col-mobile-12">
+                                    <button class="outline-primary block mt-20" (click)="redirectToLogin()">
+                                        Login
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</section>
+
+<ng-template #signupFormMessage>
+    <app-block-message *ngIf="statusmessage.enable" [data]="statusmessage.data"></app-block-message>
+</ng-template>

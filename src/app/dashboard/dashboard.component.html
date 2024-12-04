@@ -1,0 +1,48 @@
+<ng-container *ngIf="!loading; else addressLoaderTemplate">
+    <ng-container *ngIf="hasAddress; else showAddress">
+        <router-outlet></router-outlet>
+        <app-nav-bottom></app-nav-bottom>
+    </ng-container>
+    <ng-template #showAddress>
+        <ng-container *ngIf="onboarding">
+            <app-welcome (handleEvent)="enableLocation($event)"></app-welcome>
+        </ng-container>
+        <ng-container *ngIf="enableAddress">
+            <app-address></app-address>
+        </ng-container>
+    </ng-template>
+</ng-container>
+
+<ng-template #addressLoaderTemplate>
+    <div class="address-loader">
+        <div class="address-location">
+            <p class="text-center mb-20">
+                <span class="material-symbols-outlined fc-dark">
+                    near_me
+                </span>
+            </p>
+            <p class="os-base fc-dark">
+                Locating your position, please hold on.
+            </p>
+        </div>
+        <div class="address-bar">
+            <div class="ghost-text mb-10 first">
+
+            </div>
+            <div class="ghost-text mb-10">
+
+            </div>
+            <div class="ghost-text mb-10">
+
+            </div>
+            <div class="ghost-text mb-50">
+
+            </div>
+            <div class="ghost-block">
+                <p class="os-base fc-light">
+                    Please hold on.
+                </p>
+            </div>
+        </div>
+    </div>
+</ng-template>

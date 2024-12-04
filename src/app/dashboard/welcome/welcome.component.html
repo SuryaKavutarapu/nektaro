@@ -1,0 +1,17 @@
+<section class="walkthrough-wrapper">
+  <div class="image">
+    <img [src]="content.image" alt="image">
+  </div>
+  <div class="content">
+    <div class="step mb-10">
+      <h2 class="psd-medium fc-dark mb-10">{{content.title}}</h2>
+      <p class="os-base fc-black">
+        {{content.description}}
+      </p>
+    </div>
+    <div class="actions mt-10">
+      <button class="primary block mb-10" (click)="nextStep()">{{content.primaryAction}}</button>
+      <button class="outline-primary block" (click)="previousStep()" *ngIf="content.enableBackStep">Back</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+<div class="table-wrapper">
+    <div class="table-toolbar">
+        <div class="search-bar">
+            <input class="nektaro-input small" [(ngModel)]="searchInput" placeholder="Search" type="text" id="search">
+        </div>
+        <div class="filters">
+            <span class="material-symbols-outlined fc-dark mr-10">
+                filter_alt
+            </span>
+            <span class="os-base fc-black">Filters</span>
+        </div>
+    </div>
+    <div class="table-body">
+        <ng-container *ngIf="!loading; else loadingTemplate">
+            <ng-container *ngIf="tableData.length >  0; else emptyState">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th *ngFor="let header of tableHeaders">{{header['name']}}</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let each of tableData">
+                            <td *ngFor="let header of tableHeaders"><span>
+                                    {{each[header['id']]}}
+                                </span></td>
+                            <td>
+                                <span class="material-symbols-outlined fc-dark action-item mr-10" (click)="viewData(each['id'])">
+                                    visibility
+                                </span>
+                                <span class="material-symbols-outlined fc-error action-item" (click)="deleteData(each['id'])">
+                                    delete
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </ng-container>
+            <ng-template #emptyState>
+                <div class="loading">
+                    <p class="fc-dark">No Records Found.</p>
+                </div>
+            </ng-template>
+        </ng-container>
+        <ng-template #loadingTemplate>
+            <div class="loading">
+                <p class="fc-dark">Please wait we will be processing the data.</p>
+            </div>
+        </ng-template>
+    </div>
+    <div class="table-footer">
+        <div class="filters">
+            <span class="os-base fc-black">Total Results: <strong class="fc-dark">{{tableData.length}}</strong> Records
+                found.</span>
+        </div>
+    </div>
+</div>

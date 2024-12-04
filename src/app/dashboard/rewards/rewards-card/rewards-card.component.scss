@@ -1,0 +1,29 @@
+.rewards-card-wrapper{
+  width: 100%;
+  min-height: 250px;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--nektaro-offwhite);
+  .reward-info {
+    width: 100%;
+    min-height: 120px;
+    border-bottom: 2px dashed var(--nektaro-dark);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .reward-terms {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+}

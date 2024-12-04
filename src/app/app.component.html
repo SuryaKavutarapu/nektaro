@@ -1,3 +1,8 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+    <div class="loader" *ngIf="isLoading">
+        <div class="loader-bar"></div>
+    </div>
+    <div class="nekatro-wrapper" [ngClass]="{'app-mode': layoutService.isMobileApp}">
+        <router-outlet></router-outlet>
+    </div>
 </ion-app>

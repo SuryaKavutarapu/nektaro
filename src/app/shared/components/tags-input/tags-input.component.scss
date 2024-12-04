@@ -1,0 +1,51 @@
+.ngx-tagscontainer {
+  width: 100%;
+  max-width: 100%;
+}
+
+.ngx-tag {
+  color: var(--nektaro-dark);
+  background-color: var(--nektaro-offwhite);
+  border: 2px solid var(--border-color);
+  padding: 3px 8px;
+  font-size: 16px;
+  margin-right: 5px;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.ngx-tag svg {
+  height: 15px;
+  cursor: pointer;
+  color: var(--nektaro-green);
+}
+
+.error {
+  color: var(--nektaro-error);
+}
+
+.ngx-inputcontainer {
+  margin: 10px 0px;
+}
+
+.ngx-tagslabel {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.ngx-tagsinput {
+  all: unset;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0px;
+  height: 42px;
+  border: 1px solid var(--border-color);
+  background-color: var(--nektaro-white);
+  padding: 0px 15px;
+  border-radius: 2px;
+}
+
+.ngx-tagsinput::placeholder {
+  color: var(--placeholder-color);
+}

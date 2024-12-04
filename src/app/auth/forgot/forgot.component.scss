@@ -1,0 +1,19 @@
+.mapp-forgot-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--nektaro-offwhite);
+    position: relative;
+    .intro-text {
+      padding: 10px 0px 10px;
+      width: 100%;
+      margin-top: 100px;
+    }
+  
+    .forgot-card {
+      margin: 10px auto;
+      box-sizing: border-box;
+      padding: 10px 0px;
+    }
+  }
+  

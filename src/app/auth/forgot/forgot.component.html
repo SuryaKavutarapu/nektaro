@@ -1,0 +1,34 @@
+<section class="mapp-forgot-wrapper">
+    <div class="container">
+        <div class="row mb-50">
+            <div class="col-mobile-12 text-center mb-20 col-pc-6 col-pc-offset-3">
+                <div class="intro-text">
+                    <h2 class="fc-dark psd-medium mb-20">Forgot Password?</h2>
+                    <p class="fc-black os-base">If you've forgotten your password, don't worry! Enter your email address
+                        below, and
+                        we'll send you a link to reset your password.</p>
+                </div>
+                <div class="forgot-card">
+                    <form [formGroup]="forgotForm" #forgot="ngForm" (ngSubmit)="handleForgot()">
+                        <div class="row">
+                            <div class="col-mobile-12">
+                                <input class="nektaro-input" formControlName="email" placeholder="Ex: alex@nektaro.com"
+                                    type="email" id="email">
+                            </div>
+                            <div class="col-mobile-12">
+                                <button class="primary block mt-20" [disabled]="forgotForm.invalid" type="submit">
+                                    Submit
+                                </button>
+                            </div>
+                            <div class="col-mobile-12">
+                                <button class="outline-primary block mt-20" (click)="redirectToLogin()">
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

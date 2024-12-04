@@ -1,0 +1,8 @@
+<nav class="nektaro-nav-mobile">
+  <a href="javascript:void(0);" (click)="setMenuActiveAndRedirect(item)" *ngFor="let item of menuItems" class="menu-item" [ngClass]="{ active: item.isActive }">
+    <span class="material-symbols-outlined">
+      {{item.icon}}
+    </span>
+    <span class="menu-text">{{item.name}}</span>
+  </a>
+</nav>

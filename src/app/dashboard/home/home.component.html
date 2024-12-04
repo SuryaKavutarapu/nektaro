@@ -1,0 +1,144 @@
+<app-header></app-header>
+<div class="home-wrapper">
+    <ng-container *ngIf="subscriptions.length > 0; else subscriptionsEmptyState">
+        <section class="mb-50">
+            <div class="row mb-20">
+                <div class="col-mobile-12">
+                    <p class="osd-base fc-dark mb-10 mt-20 text-uppercase">
+                        <strong>Your Subscriptions</strong>
+                    </p>
+                    <p class="os-footnote fc-placeholder mb-10">
+                        Easily manage and view your active plans.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-mobile-12">
+                    <div class="subscription-info">
+                        <div class="subscription-content">
+                            <p class="os-base fc-black mb-10">
+                                Nutritional Power Bowl Plan
+                            </p>
+                            <p class="mb-20 os-footnote fc-placeholder">
+                                Weekly plan |
+                                12.08.2024 - 19.08.2024
+                            </p>
+                            <p class="mb-10">
+                                <span class="badge-lemongreen">
+                                    active
+                                </span>
+                                &nbsp;
+                                <span class="os-footnote fc-placeholder">
+                                    Ends in 3 days.
+                                </span>
+                            </p>
+                        </div>
+                        <div class="subscription-actions">
+                            <strong class="fc-dark os-footnote text-uppercase"> view details</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </ng-container>
+    <ng-template #subscriptionsEmptyState>
+        <app-empty-state [image]="'images/offers-emptystate.svg'" [title]="emptyState.title"
+            [action]="emptyState.action" (actionEvent)="emptyStateAction($event)"
+            [description]="emptyState.description"></app-empty-state>
+    </ng-template>
+    <section class="plans mt-50">
+        <div class="row mb-20">
+            <div class="col-mobile-12 mb-20">
+                <p class="osd-base fc-dark mb-10 mt-20 text-uppercase">
+                    <strong>Explore All Plans</strong>
+                </p>
+                <p class="os-footnote fc-placeholder mb-10">
+                    Browse our daily delivery plans.
+                </p>
+            </div>
+            <div class="col-mobile-12">
+                <div class="products-wrapper">
+                    <div class="product">
+                        <div class="row">
+                            <div class="col-mobile-6">
+                                <div class="card">
+                                    <div class="card-img"
+                                        style="background-image: url('/assets/images/powerbowls-bg-image.png')"></div>
+                                    <div class="card-content">
+                                        <p class="os-base fc-black mb-10">
+                                            Nutritional Power Bowl
+                                        </p>
+                                        <p class="mb-20 os-base fc-dark">
+                                            <strong>Rs. 799.00/-</strong>
+                                        </p>
+                                        <p class=" os-footnote fc-placeholder">
+                                            Weekly | 6 x bowls
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-mobile-6">
+                                <div class="card">
+                                    <div class="card-img"
+                                        style="background-image: url('/assets/images/powerbowls-bg-image.png')"></div>
+                                    <div class="card-content">
+                                        <p class="os-base fc-black mb-10">
+                                            Nutritional Power Bowl
+                                        </p>
+                                        <p class="mb-20 os-base fc-dark">
+                                            <strong>Rs. 799.00/-</strong>
+                                        </p>
+                                        <p class=" os-footnote fc-placeholder">
+                                            Weekly | 6 x bowls
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-mobile-6">
+                                <div class="card">
+                                    <div class="card-img"
+                                        style="background-image: url('/assets/images/powerbowls-bg-image.png')"></div>
+                                    <div class="card-content">
+                                        <p class="os-base fc-black mb-10">
+                                            Nutritional Power Bowl
+                                        </p>
+                                        <p class="mb-20 os-base fc-dark">
+                                            <strong>Rs. 799.00/-</strong>
+                                        </p>
+                                        <p class=" os-footnote fc-placeholder">
+                                            Weekly | 6 x bowls
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-mobile-6">
+                                <div class="card">
+                                    <div class="card-img"
+                                        style="background-image: url('/assets/images/powerbowls-bg-image.png')"></div>
+                                    <div class="card-content">
+                                        <p class="os-base fc-black mb-10">
+                                            Nutritional Power Bowl
+                                        </p>
+                                        <p class="mb-20 os-base fc-dark">
+                                            <strong>Rs. 799.00/-</strong>
+                                        </p>
+                                        <p class=" os-footnote fc-placeholder">
+                                            Weekly | 6 x bowls
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-mobile-12">
+                                <p class="osd-base fc-dark mb-10">
+                                    <a href="" class="base-link">Explore Plans <span class="material-symbols-outlined">
+                                            arrow_forward
+                                        </span></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

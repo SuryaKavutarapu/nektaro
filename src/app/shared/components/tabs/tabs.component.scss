@@ -1,0 +1,35 @@
+.tabs-wrapper {
+    width: 100%;
+    background-color: var(--nektaro-offwhite);
+    .tabs-header {
+        width: 100%;
+        background-color: var(--nektaro-light-bg);
+        .tablist {
+            width: 100%;
+            margin: 0px;
+            list-style: none;
+            padding-left: 0px;
+            li {
+                display: inline-block;
+                margin-left: 0px;
+                padding: 20px 0px;
+                width: 33.33%;
+                border-bottom: 3px solid var(--nektaro-light-bg);
+                background-color: var(--nektaro-light-bg);
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+                cursor: pointer;
+                text-align: center;
+                &:hover {
+                    color: var(--nektaro-green);
+                    border-bottom: 3px solid var(--border-color);
+                }
+                &.active {
+                    color: var(--nektaro-green);
+                    border-bottom: 3px solid var(--nektaro-green);
+                }
+            }
+        }
+    }
+}

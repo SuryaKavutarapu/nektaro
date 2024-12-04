@@ -1,0 +1,65 @@
+.os-footnote {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.nektaro-nav-mobile {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  background-color: var(--nektaro-white);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  border-top: 1px solid var(--border-color);
+  .menu-item {
+    text-decoration: none;
+    width: 24%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: var(--placholder-color);
+    &:active,
+    &:visited,
+    &:hover {
+      text-decoration: none;
+    }
+
+    .material-symbols-outlined {
+      font-size: 24px;
+      color: var(--placholder-color);
+      margin-bottom: 5px;
+    }
+    .menu-text {
+      @extend .os-footnote;
+      color: var(--placholder-color);
+    }
+
+    &:hover,
+    &.active {
+      .material-symbols-outlined {
+        color: var(--nektaro-green);
+      }
+      .menu-text {
+        color: var(--nektaro-black);
+        font-weight: 600;
+      }
+    }
+  }
+}

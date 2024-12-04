@@ -1,0 +1,25 @@
+.address-loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--nektaro-light);
+    .address-location {
+        padding: 50px;
+        width: 100%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        flex-direction: column;
+        .material-symbols-outlined {
+            font-size: 40px;
+        }
+    }
+    .address-bar {
+        width: 100%;
+        height: 40%;
+        padding: 20px 30px;
+        background-color: var(--nektaro-white);
+    }
+}

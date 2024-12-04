@@ -1,0 +1,60 @@
+<div class="login-wrapper">
+    <div class="login-card">
+        <ng-container *ngIf="!isLoggedIn; else loginFormMessage">
+            <div class="container">
+                <div class="row mb-20">
+                    <div class="col-mobile-12 text-center mb-20 col-pc-6 col-pc-offset-3">
+                        <h2 class="fc-dark psd-medium mb-20">
+                            Welcome!</h2>
+                        <p class="fc-black os-base">You're just one step away from transforming your health. Log in and
+                            start your journey to a healthier you today.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-mobile-12 col-pc-6 col-pc-offset-3">
+                        <div class="col-mobile-12 mb-20 mt-20">
+                            <app-block-message *ngIf="statusmessage.enable"
+                                [data]="statusmessage.data"></app-block-message>
+                        </div>
+                        <form [formGroup]="loginForm" (ngSubmit)="login()">
+                            <div class="col-mobile-12 mb-20">
+                                <input type="text" name="email" class="nektaro-input" formControlName="email"
+                                    placeholder="Enter email address">
+                                <app-inline-message
+                                    *ngIf="(loginFormControls.email.invalid && (loginFormControls.email.dirty || loginFormControls.email.touched)) && loginFormControls.email.errors?.['required']"
+                                    [message]="'Please enter valid email address.'"></app-inline-message>
+                            </div>
+                            <div class="col-mobile-12 mb-20">
+                                <input type="password" class="nektaro-input" formControlName="password"
+                                    placeholder="Enter password">
+                                <app-inline-message
+                                    *ngIf="(loginFormControls.password.invalid && (loginFormControls.password.dirty || loginFormControls.password.touched)) && loginFormControls.password.errors?.['required']"
+                                    [message]="'Password must not be empty.'"></app-inline-message>
+                            </div>
+                            <div class="col-mobile-12 mb-20">
+                                <p class="text-right"><a href="javascript:void(0)" (click)="redirectToForgotPassword()"
+                                        class="fc-black osc-base">Forgot
+                                        Password?</a>
+                                </p>
+                            </div>
+                            <div class="col-mobile-12">
+                                <button class="primary block mt-20" [disabled]="!loginForm.valid" type="submit">
+                                    Login
+                                </button>
+                            </div>
+                            <div class="col-mobile-12">
+                                <button class="outline-primary block mt-20" (click)="redirectToSignUp()">
+                                    Signup
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<ng-template #loginFormMessage>
+    <app-block-message *ngIf="statusmessage.enable" [data]="statusmessage.data"></app-block-message>
+</ng-template>

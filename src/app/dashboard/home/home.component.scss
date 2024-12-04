@@ -1,0 +1,23 @@
+.home-wrapper {
+  width: 100%;
+  height: calc(100vh - 180px);
+  margin-top: 100px;
+  padding: 20px 30px;
+  overflow-x: hidden;
+  .subscription-info {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    .subscription-content {
+      padding: 15px 20px;
+      text-align: left;
+      width: 100%;
+    }
+    .subscription-actions {
+      width: 100%;
+      border-top: 1px solid var(--border-color);
+      padding: 15px;
+      text-align: center;
+    }
+  }
+}
